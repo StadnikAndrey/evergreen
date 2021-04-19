@@ -117,7 +117,7 @@
                         <div class="form_row">
                             <label class="form_label">Урожайность, ц/га</label>
                             <input class="form_input" :class="yield.inputErrClass"
-                            type="number"
+                            type="number" min="0" inputmode="numeric" pattern="[0-9]*"
                             name="yield"  
                             v-model.trim="response[indexResponse].yield"
                             @input="input">
@@ -126,7 +126,7 @@
                         <div class="form_row">
                             <label class="form_label">Стоимость хим. удобрения, грн/га</label>
                             <input class="form_input" :class="cost.inputErrClass"
-                            type="number"
+                            type="number" min="0" inputmode="numeric" pattern="[0-9]*"
                             name="cost"
                             v-model.trim="response[indexResponse].cost"
                             @input="input">
@@ -135,7 +135,7 @@
                         <div class="form_row">
                             <label class="form_label">Посевная площадь, га</label>
                             <input class="form_input" :class="area.inputErrClass"
-                            type="number"
+                            type="number" min="0" inputmode="numeric" pattern="[0-9]*"
                             name="sownArea"
                             v-model.trim="sownArea"
                             @input="input">
